@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <style>
+        #ForModal {
+            position: relative;
+        }
+
+        #modal {
+            height: 4vh;
+            width: 80vw;
+            background-color: #fff;
+            box-shadow: 2px 9px 35px -12px rgba(0, 0, 0, 0.75);
+            position: fixed;
+            top: 100px;
+            transform: scale(0);
+            transition: .5s;
+            z-index: 1;
+        }
+
+        #cart {
+            position: absolute;
+            height: 500px;
+            overflow-y: scroll;
+            right: 80px;
+            top: 80px;
+            background-color: #b8bcbe;
+
+        }
+
+
+
+
+
+
+
+        .grid-container {
+            display: grid;
+            column-gap: 6%;
+            row-gap: 5%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .grid {
+            display: grid;
+            column-gap: 0.2%;
+            row-gap: 5%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        }
+
+        body {
+            color: black;
+            /* background-color: rgb(170, 168, 168); */
+            background-color: #fff;
+        }
+
+        body {
+            background-color: #262626;
+        }
+
+        .mt {
+            background-color: rgb(211, 210, 210);
+            margin-top: -18%;
+            position: relative;
+            padding-left: 3%;
+            padding-right: 3%;
+            height: 1700px;
+            margin-left: 2.5%;
+            width: 95%;
+
+
+        }
+
+        .mt2 {
+            background-color: rgb(211, 210, 210);
+            margin-top: 3%;
+            position: relative;
+            padding-bottom: 3%;
+            margin-left: 2.5%;
+            width: 95%;
+
+        }
+
+        .mt3 {
+            background-color: rgb(211, 210, 210);
+            margin-top: 5%;
+            position: relative;
+            padding-top: 5%;
+            height: 1000px;
+            margin-left: 2.5%;
+            width: 95%;
+
+
+        }
+
+        #w {
+
+            font-family: Karla;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            font-size: x-large;
+            text-align: center;
+            margin-top: 10%;
+
+        }
+
+
+        #i1 {
+
+            margin-top: 11%;
+
+        }
+
+
+
+
+        #banner {
+            width: 100%;
+            height: 800px;
+
+        }
+
+        div img {
+            width: 100%;
+
+
+        }
+
+        /* #div {
+            background-color: aqua; 
+
+             width: 10%; 
+
+        } */
+
+        #btn {
+            margin-top: 5%;
+        }
+
+        .grid-item {
+
+            transition: transform .5s;
+
+
+        }
+
+        .grid-item:hover {
+            background-color: #b8bcbe;
+            transform: scale(1.1);
+            overflow: hidden;
+
+        }
+
+        .grid-itemm {
+            transition: transform .5s;
+            height: 105%;
+            text-align: center;
+
+        }
+
+        /* .grid-itemm p {
+           padding: 2%;
+        
+        } */
+
+        .grid-itemm:hover {
+            background-color: #b8bcbe;
+            transform: scale(1.1);
+            overflow: hidden;
+        }
+
+        .grid-itemm {
+
+            padding-top: -60%;
+            padding-left: 8%;
+            padding-right: 8%;
+
+        }
+
+        #icon {
+            margin-left: 58%;
+            position: absolute;
+            margin-top: -3.5%;
+            color: #b8bcbe;
+        }
+
+        #aaa {
+            margin-right: 5%;
+        }
+
+        #img22 {
+            margin-top: 6%;
+            margin-left: 3%;
+
+
+        }
+
+        .para {
+            margin-top: 40%;
+            padding: 10%;
+            font-size: medium;
+        }
+
+        #be {
+            text-align: center;
+        }
+
+        #gappp {
+            position: relative;
+            margin-top: -7%;
+        }
+        #gappp2 {
+            position: relative;
+            margin-top: 7%;
+        }
+        #gappp3  {
+            position: relative;
+            margin-top: 4%;
+        }
+        /*   
+       #iiii{
+height: 38.9%;
+padding-top: 10%;
+
+        } 
+       #iiii2{
+height: 40PX;
+padding-top: 10%;
+
+        } 
+       #iiii3{
+height: 40%;
+padding-top: 10%;
+
+        } 
+       #iiii4{
+height: 38.9%;
+padding-top: -10%;
+
+        } 
+       /* #iiii5{
+height: 38.9%;
+padding-top: -10%;
+
+        }  
+       /* #iiii6{
+height: 38.9%;
+padding-top: -10%;
+
+        } 
+        */
+        #iiii7 {
+            height: 3%;
+
+        }
+
+        #iiii8 {
+            height: 3%;
+
+
+        }
+
+        #BOLD {
+            color: #fff;
+
+        }
+
+        #BOLD2 {
+            color: #fff;
+
+
+        }
+
+        /* .jjj{
+        width: 10000000%;
+        }  */
+    </style>
+
+    <div>
+
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1b1b1b;">
+            <a class="navbar-brand" href="#">Malik Home Decor </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"> </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a id="a" class="nav-link" href="m.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+    
+                    <li id="a" class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Categories</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="matel art/matel wall art.html">matel wall art</a>
+                            <a class="dropdown-item" href="photo freme art/Photo frame art.html">Photo frame art</a>
+                            <a class="dropdown-item" href="mirror art/Mirror art.html"> Mirror art</a>
+                            <a class="dropdown-item" href="wall shelves/Wall shelvest.html">Wall shelvest</a>
+                            <a class="dropdown-item" href="wall paper/Wall papers.html">Wall papers </a>
+                            <a class="dropdown-item" href="wall mounted animals/Wall mounted animals.html">Wall mounted animals</a>
+                        </div>
+                    </li>
+                </ul>
+                <form id="aaa" class="form-inline my-2 my-lg-0">
+                    <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="col-md-5 d-flex">
+        <!-- <input type="text" id="inp" class="form-control">
+        <button class="btn btn-primary" id="searchBtn">Search</button> -->
+    </div>
+    <div class="col-md-2">
+        <!-- <select name="" id="price" class="form-control">
+            <option value="">select Price</option>
+            <option value="100">0 - 100</option>
+            <option value="200">100 - 200</option>
+            <option value="300">200 - 300</option>
+            <option value="400">300 - 400</option>
+        </select> -->
+    </div>
+    <div id="icon" class="col-md-5 d-flex justify-content-end">
+        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+        <span id="cartItemCount">0</span>
+    </div>
+
+
+    </div>
+
+
+
+
+    <img id="banner" src="images/Decor banner (1).jpg">
+
+
+
+    <!-- ======================  Modal   =====================  -->
+
+    <div id="ForModal" class="container">
+
+        <div id="modal" class="p-4">
+
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+
+        <!-- ======================  header  =====================  -->
+        <div class="row">
+
+
+            <!-- ======================  Products   =====================  -->
+
+            <!-- <div class="row" id="productPannel"> -->
+
+        </div>
+
+
+
+        <!-- ======================  Cart   =====================  -->
+
+
+        <div class="col-md-5  p-5" id="cart">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Title</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cartProductPannel">
+
+                </tbody>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td id="totalPrice">$0.00</td>
+                </tr>
+            </table>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <!--     
+    <br>
+    <br>
+    <br>
+    <center>
+    
+    <div class="grid-container">src
+    <div class="grid-item"> <img id="i"  src="images/decor banner.jpg" > </div>
+    <div class="grid-item"> <img id="i1" src="images/decor banner.jpg" > </div>
+    <div class="grid-item"> <img src="images/decor banner.jpg"> </div>
+    <div class="grid-item"> <img id="i"  src="images/decor banner.jpg"> </div>
+    <div class="grid-item"> <img id="i1" src="images/decor banner.jpg"> </div>
+    <div class="grid-item"> <img src="images/decor banner.jpg"> </div>
+    
+</div>
+</center> -->
+    <br>
+    <br>
+    <br>
+
+    <div class="row mt">
+        <div id="div" class="col-xxl-12">
+            <!-- <div class="col-md 4"></div> -->
+
+            <div class="grid-container">
+
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">DIY Clocks</p> <img class="products" key="1" id="i111"
+                        src="images/1.webp">
+                    <center>
+                        <div class="product-card__name  ">DIY acrylic Clock , Code <br><br> </div>
+                        <span class="visually-hidden"></span>
+                        <s class="product-card__regular-price">Rs.1,500</s>
+                        <span class="visually-hidden"></span>
+                        Rs.1,250
+
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary AddToCartBtn " key="1">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title"> Acrylic bloom bail</p> <img id="iiii1" class="products"
+                        key="2" src="images/8.webp">
+                    <center>
+                        <div class="product-card__name  ">Black acrylic bloom bail<br><br></div>
+                        <span class="visually-hidden"></span>
+                        <s class="product-card__regular-price">Rs.3,200</s>
+                        <span class="visually-hidden"></span>
+                        Rs.1,799
+
+
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary AddToCartBtn " key="2">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">Acrylic Wall Art</p><img id="i1112" class="products"
+                        key="6" src="images/6.webp">
+                    <center>
+                        <div class="product-card__name  ">Acrylic 3d Mirror Wall Lines<br><br></div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.2,500</s>
+                            <span class="visually-hidden"></span>
+                            Rs.1,499
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary AddToCartBtn " key="6">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+
+
+
+
+
+
+
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">wall decor</p><img id="i1113" class="products" key="4"
+                        src="images/3.jpg">
+                    <center>
+                        <div class="product-card__name  ">Big Wooden Grazing Deers in Meadows wall clock<br>
+                        </div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.2,999</s>
+                            <span class="visually-hidden"></span>
+                            Rs.999
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary AddToCartBtn " key="4">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">European clock</p><img id="i1114" class="products" key="5"
+                        src="images/4.jpg">
+                    <center>
+                        <div class="product-card__name  ">European clock<br><br></div>
+                        <div class="product-card__price">
+                            On sale from Rs.999
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary  AddToCartBtn " key="5">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">Acrylic Wall Art</p><img id="iiii5" class="products"
+                        key="3" src="images/2.jpg">
+
+                    <center>
+                        <div class="product-card__name  ">Acrylic 3d Mirror Wall Lines<br><br></div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.3,200</s>
+                            <span class="visually-hidden"></span>
+                            Rs.1,899
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary  AddToCartBtn " key="3">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+
+
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">Grizzo Wall Shelf</p><img id="i1116" class="products"
+                        key="7" src="images/222222.jpg">
+                    <center>
+                        <div class="product-card__name  ">Buy Wooden Shelves Online Deals, 51% OFF<br><br></div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.3,200</s>
+                            <span class="visually-hidden"></span>
+                            Rs.1,899
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">Acrylic Wall Art</p><img id="i1117" class="products"
+                        key="8" src="images/7.jpg">
+                    <center>
+                        <div class="product-card__name  ">Acrylic 3d Mirror Wall Lines<br><br></div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.3,200</s>
+                            <span class="visually-hidden"></span>
+                            Rs.1,899
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary  AddToCartBtn " key="8">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+
+                <div class="grid-item">
+                    <p id="w" class="h1 featured-card__title">Acrylic Wall Art</p><img id="i1118" class="products"
+                        key="9" src="images/15.webp">
+                    <center>
+                        <div class="product-card__name  ">Acrylic 3d Mirror Wall Lines<br><br></div>
+                        <div class="product-card__price">
+                            <span class="visually-hidden"></span>
+                            <s class="product-card__regular-price">Rs.3,200</s>
+                            <span class="visually-hidden"></span>
+                            Rs.1,899
+                        </div>
+                        <div id="btn">
+                            <button type="button" class="btn  btn-primary  AddToCartBtn " key="9">Add to
+                                cart</button>
+                            <button type="button" class="btn btn-success">compare</button>
+                        </div>
+                    </center>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="container "> -->
+
+    <div class="row mt2">
+        <div class="col-md-6">
+            <img id="img22" src="images/3_540x.webp">
+
+
+        </div>
+        <div class="col-md-6">
+            <center>
+                <div class="flex__item image-content__text text-center para">
+                    <p id="be" class="h5">About Us</p>
+                    <div id="be">
+                        <span>We at Decor and more make sure that you get best quality products for your home decor
+                            in
+                            reasonable prices. We offer cash on delivery all over Pakistan with 7-days replacement
+                            policy of defected parts. So dont worry for anything while ordering on Decor and
+                            more.</span>
+                        <p><br></p>
+                    </div>
+                </div>
+            </center>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- </div> -->
+
+    <!-- <div class="container   "> -->
+    <div class=" mt3 col-xxl-12">
+
+
+        <div class="grid">
+            <div class="grid-itemm"> <img src="images/7.1.webp">
+                <p>Acrylic Heart and Flowers with 2 frames</p>
+                <div id="gappp">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div  class="grid-itemm"> <img src="images/mountain_180x.webp">
+                <P id="gappp3">Black Mountain wall Art</P>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/9.webp">
+                <p id="gappp3" > The ride clock with rope light</p>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/10.webp">
+                <p id="gappp3" >Moterbike Theme Clock</p>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/11.webp">
+                <p>Home clock family frames with rope light</p>
+                <div id="gappp">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/12.webp">
+                <p id="gappp3" >new office clock</p>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/7.webp">
+                <p id="gappp3" >
+                    family tree green leaves
+                  </p>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+            <div class="grid-itemm"> <img src="images/13.webp">
+                <p id="gappp3" >red and black vase</p>
+                <div id="gappp2">
+                    <s> Rs.3,500</s>
+                    Rs.2,299
+                </div>
+                <div id="btn">
+                    <button type="button" class="btn  btn-primary  AddToCartBtn " key="7">Add to
+                        cart</button>
+                    <button type="button" class="btn btn-success">compare</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        $(document).ready(() => {
+
+            let data = [
+                { id: 1, name: "Nike", img: "1.webp", price: 100, decription: '' },
+                { id: 2, name: "Nike", img: "2.webp", price: 70 },
+                { id: 3, name: "Addidas", img: "3.webp", price: 150 },
+                { id: 4, name: "Addidas", img: "3.jpg", price: 170 },
+                { id: 5, name: "Nike", img: "4.jpg", price: 200 },
+                { id: 6, name: "Reebok", img: "2.jpg", price: 250 },
+                { id: 7, name: "Addidas", img: "222222.jpg", price: 170 },
+                { id: 8, name: "Nike", img: "7.jpg", price: 200 },
+                { id: 9, name: "Reebok", img: "15.webp", price: 250 },
+
+            ];
+
+            $("#productPannel".hide)
+            let cards = "";
+
+
+            data.forEach((item) => {
+
+
+                cards += `
+                        <div class="col-md-3 mt-4">
+                             <div class="card">
+                                 <img class="w-100 products" key="${item.id}"   src="${item.img}">
+                             </div>
+                             <h2>${item.name}</h2>
+                             <p>$ ${item.price}</p>
+                             <button class="btn btn-primary AddToCartBtn" key="${item.id}">Add to cart</button>
+
+                        </div>`;
+
+            });
+
+            $("#productPannel").html(cards);
+
+            $("#searchBtn").click(() => {
+                let inp = $("#inp").val();
+
+                let cards = " ";
+                data.forEach((item) => {
+
+                    if (item.name.toLowerCase().includes(inp.toLowerCase())) { }
+
+                    cards += `
+                        <div class="col-md-3 mt-4">
+                           
+                             <button class="btn btn-primary AddToCartBtn"  key="${item.id}">Add to cart</button>
+
+                        </div>`;
+
+
+
+
+                });
+
+                $("#productPannel").html(cards);
+            })
+
+
+            $("#price").change(() => {
+
+                let cards = " ";
+                data.forEach((item) => {
+
+                    let maxPrice = $("#price").val();
+
+                    let minPrice = maxPrice - 100;
+
+                    if (item.price >= minPrice && item.price <= maxPrice) {
+
+                        cards += `
+                        <div class="col-md-3 mt-4">
+                             <div class="card">
+                                 <img class="w-100 products"  key="${item.id}"  src="${item.img}">
+                             </div>
+                             <h2>${item.name}</h2>
+                             <p>$ ${item.price}</p>
+                             <button class="btn btn-primary AddToCartBtn"  key="${item.id}">Add to cart</button>
+                             
+                        </div>`;
+
+                    }
+
+
+                });
+
+                $("#productPannel").html(cards);
+
+            })
+
+
+
+            $(".products").click(function () {
+                console.log($(this).attr("key"));
+                data.forEach((item) => {
+
+                    if (item.id == $(this).attr("key")) {
+
+                        let modal = `
+
+                                <div>
+                                    <i class="fa-solid fa-xmark fa-2x close" id="closeBtn"></i>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img src="${item.img}" class="w-75" alt="">
+                                        </div>
+                                        <div class="col-md-6 d-flex flex-wrap align-content-center">
+                                            <div>
+                                                <h2 class="display-4">${item.name}</h2>
+                                                <h2 class="text-success">$ ${item.price}</h2>
+                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ullam rerum laboriosam
+                                                </p>
+                                                <button class="btn btn-primary" id="AddToCartBtn" key="${item.id}">Add to cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                        `;
+
+
+                        $("#modal").html(modal);
+                    }
+
+
+
+                });
+
+                $("#modal").css("transform", "scale(1)");
+
+                $("#closeBtn").click(() => {
+                    $("#modal").css("transform", "scale(0)");
+                })
+
+
+            })
+
+
+
+            // ============== Add to cart ==================
+            $("#cart").hide();
+            $(".fa-cart-shopping ").click(function () {
+
+                $("#cart").show();
+
+            })
+            $("#cart").mouseleave(function () {
+                $("#cart").hide();
+            })
+
+            // ============== Adding Product to cart ==================
+
+            let cartData = [];
+
+            $(".AddToCartBtn").click(function () {
+
+
+                data.forEach((item) => {
+
+                    if (item.id == $(this).attr("key")) {
+                        cartData.push(item);
+                    }
+                });
+
+                $("#cartItemCount").html(cartData.length);
+
+                let productInCart = "";
+                cartData.forEach((item) => {
+
+                    productInCart += `
+                        <tr id="tttt">
+                            <td><img src="${item.img}" width="80" alt=""></td>
+                            <td>${item.name}</td>
+                            <td>1</td>
+                            <td>$${item.price}</td>
+                            <td><i id="close" class="fa-solid fa-xmark"></i></td>
+                            </tr>
+                            `;
+                    $("#close").click(function () {
+                        $("#tttt").remove();
+                    })
+
+
+                })
+                $("#cartProductPannel").html(productInCart);
+
+
+                let totalPrice = 0;
+                cartData.forEach((item) => {
+                    totalPrice += item.price
+                })
+
+                $("#totalPrice").html("$" + totalPrice);
+
+            })
+
+
+
+
+
+
+
+
+            // ============== Add to cart ==================
+
+
+
+
+
+
+        });
+
+
+    </script>
+
+
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <!-- <div class="container jjj"> -->
+
+    <footer class="text-center text-lg-start border border-white mt-xl-5 pt-4">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 id="BOLD" class="text-uppercase mb-4">OUR WORLD</h5>
+
+                    <ul class="list-unstyled mb-4">
+                        <li>
+                            <a href="#!" class="text-white">About us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Collections</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Environmental philosophy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Artist collaborations</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 id="BOLD" class="text-uppercase mb-4">Assistance</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Size Guide</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Shipping Information</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Returns & Exchanges</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">Payment</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 id="BOLD" class="text-uppercase mb-4">Careers</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-white">Jobs</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 id="BOLD" class="text-uppercase mb-4">Sign up to our newsletter</h5>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="email" id="form5Example2" class="form-control" />
+                        <label id="BOLD" class="form-label" for="form5Example2">Email address</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-white btn-block">Subscribe</button>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div id="BOLD2" class="text-center p-3 border-top border-white">
+            Copyright © 2022 : Malik Home Decor. All Rights Reserved
+
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- </div> -->
+    <!-- End of .container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
